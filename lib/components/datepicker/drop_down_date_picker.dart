@@ -106,7 +106,7 @@ class DatePickerWidgetState extends State<DatePickerWidget> {
         labelText: placeholder,
         border: const OutlineInputBorder(),
       ),
-      initialValue: selectedValue,
+      value: selectedValue,
       items: options.map((value) {
         return DropdownMenuItem(
           value: value,
