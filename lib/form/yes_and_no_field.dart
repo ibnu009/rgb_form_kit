@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
-import 'package:form_builder_validators/form_builder_validators.dart';
 
+import '../components/radio_button/bordered_radio_button_boolean.dart';
 import '../resources/constants/action_constants.dart';
 import '../resources/constants/screening_constants.dart';
 import '../styles/colors.dart';
 import '../styles/text_styles/poppins_text_styles.dart';
 import '../styles/values.dart';
 import '../utils/ui_extensions.dart';
-import '../components/radio_button/bordered_radio_button_boolean.dart';
+import '../validators/rgb_validators.dart';
 
 class YesAndNoField extends FormBuilderField<bool> {
   final String? title;
@@ -154,7 +154,7 @@ class YesAndNoField extends FormBuilderField<bool> {
   }) {
     if (!isRequired) return null;
     return customValidator ??
-        FormBuilderValidators.required(
+        RgbValidators.required(
           errorText: validatorErrorMessage ??
               ScreeningConstants.pleaseFillTheForm.tr,
         );
